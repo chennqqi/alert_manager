@@ -1,6 +1,9 @@
 
 FROM node:10.12.0-alpine
 
+ARG alert_manager_server
+ENV REACT_APP_ALERT_MANAGER_SERVER $alert_manager_server
+
 # set working directory
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
