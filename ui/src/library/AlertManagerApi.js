@@ -34,9 +34,9 @@ export class AlertManagerApi {
 
         var params = `?limit=${limit}`
 
-        // if (aggregate) {
-        //     params = params + `&is_aggregate=true`
-        // }
+        if (aggregate) {
+            params = params + `&agg_id=0`
+        }
 
         // if (timerange_h) {
         //     params = params + `&timerange=72h`
